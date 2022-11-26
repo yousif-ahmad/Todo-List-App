@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List V.1.1</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2387/2387635.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/all.min.css">
+</head>
+<body>
+  <!-- Start Main Container -->
+  <div class="main-container">
+    <!-- Start Form -->
+    <form action="" class="form" id="form">
+      <!-- Start Write -->
+      <div class="write">
+        <span class="rows">
+          <span style="--i: 100%"></span>
+          <span style="--i: 70%"></span>
+          <span style="--i: 90%"></span>
+          <span style="--i: 80%"></span>
+        </span>
+        <input type="text" id="taskName" placeholder="Add a new task">
+      </div>
+      <!-- End Write -->
+
+      <!-- Start Controls -->
+      <div class="controls">
+        <div class="fillter">
+          <span class="active fill all">All</span>
+          <span class="fill pending">Pending</span>
+          <span class="fill complete">Completed</span>
+        </div>
+        <span class="clear" id="clear">Clear All</span>
+      </div>
+      <!-- End Controls -->
+    </form>
+    <!-- End Form -->
+
+    <!-- Start Task Container -->
+    <div class="task-container" id="task-container">
+    </div>
+    <!-- End Task Container -->
+  </div>
+  <!-- End Main Container -->
+  <script src="./script.js"></script>
+</body>
+</html>

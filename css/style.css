@@ -1,0 +1,174 @@
+/* Start Gobal Rules */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Pattaya&family=Poppins:wght@300;400;500&family=Raleway:ital,wght@0,300;1,100;1,400&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  background-image: linear-gradient(130deg, #48adff, #3066fe);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li {
+  list-style: none;
+}
+/* End Gobal Rules */
+
+/* Start Main Container */
+.main-container {
+  width: 370px;
+  height: 500px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #0000008a;
+  display: flex;
+  flex-direction: column;
+}
+.main-container .form {
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+  border-bottom: 1px solid #a3a3a3;
+}
+.main-container .form .write {
+  width: 100%;
+  position: relative;
+}
+.main-container .form .write .rows {
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  top: 55%;
+  left: 15px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-container .form .write .rows span {
+  width: var(--i);
+  height: 2px;
+  background-color: #bfbfbf;
+}
+.main-container .form .write input {
+  width: 100%;
+  height: 40px;
+  padding: 5px 0 5px 60px;
+  font-size: 19px;
+  outline: none;
+  border: 1px solid #a3a3a3;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.main-container .form .write input:placeholder {
+  color: #bfbfbf;
+  font-size: 15px;
+}
+.main-container .form .write input:focus {
+  border: 1px solid #3066fe;
+}
+.main-container .form .controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.main-container .form .controls .fillter span {
+  padding: 0 10px 0 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.main-container .form .controls .fillter span:hover,
+.main-container .form .controls .fillter .active {
+  color: #3066fe;
+  position: relative;
+}
+.main-container .form .controls .fillter .active::before {
+  content: "";
+  width: calc(100% - 10px);
+  height: 2px;
+  background-color: #3066fe;
+  position: absolute;
+  bottom: -30%;
+}
+.main-container .form .controls .clear {
+  color: white;
+  background-color: #498aeb;
+  padding: 3px 8px;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.main-container .form .controls .clear:hover {
+  background-color: #4a80d2;
+}
+/* End Main Container */
+
+/* Start Task Container */
+.main-container .task-container {
+  height: 100%;
+  padding: 20px;
+  overflow: auto;
+}
+.main-container .task-container .task {
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #a3a3a3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-container .task-container form label {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.main-container .task-container .complete {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+.main-container .task-container .task .settings {
+  position: relative;
+  cursor: pointer;
+}
+.main-container .task-container .task .settings .polit {
+  transition: transform 0.3s;
+  display: flex;
+  transform-origin: top right;
+}
+.main-container .task-container .task .settings .show ~ .del-edit {
+  transform: scale(1);
+}
+.main-container .task-container .task .settings .polit li {
+  width: 6px;
+  height: 6px;
+  margin: 0 1px;
+  border-radius: 50%;
+  background-color: #353535;
+}
+.main-container .task-container .task .settings .del-edit {
+  width: fit-content;
+  background-color: white;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  right: 0;
+  top: -20px;
+  transition: transform 0.3s;
+  transform-origin: top right;
+  transform: scale(0);
+}
+.main-container .task-container .task .settings .del-edit > * {
+  padding: 5px 17px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  font-size: 16px;
+}
+.main-container .task-container .task .settings .del-edit .short-cut {
+  margin-left: 10px;
+}
+.main-container .task-container .task .settings .del-edit > *:hover {
+  background-color: #f5f5f5;
+}
+/* End Task Container */
